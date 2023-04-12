@@ -9,11 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
 
+        @IBOutlet weak var progressBar: UIProgressView!
+        @IBOutlet weak var trueButton: UIButton!
+        @IBOutlet weak var falseButton: UIButton!
+        @IBOutlet weak var questionLabel: UILabel!
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            questionLabel.text = "Are you girl?"
+        }
 
+        @IBAction func answerPressed(_ sender: UIButton) {
+        }
+        
+    
 }
 
