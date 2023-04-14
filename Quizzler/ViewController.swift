@@ -19,25 +19,39 @@ class ViewController: UIViewController {
                      Questions(text: "The moon is just 50 percent of the mass of Earth.", answer: "False"),
                      Questions(text: "Your hand has a built in snuff box", answer: "True"),
                      Questions(text: "Apes cant laugh.", answer: "True")]
-    var questionNumber = 1
+    var questionNumber = 0
     override func viewDidLoad() {
         questionLabel.text = questions[0].text
+        trueButton.backgroundColor = UIColor.gray
+        falseButton.backgroundColor = UIColor.gray
+        progressBar.progress = 0
     }
-
+    
     @IBAction func answerPressed(_ sender: UIButton) {
-        let userAnswer = sender.titleLabel!.text!
-        let trueAnswer = questions[1].answer
-        print(userAnswer)
+        var userAnswer = sender.titleLabel!.text!
+        var trueAnswer = questions[questionNumber].answer
+      
+        if userAnswer == trueAnswer {
+            sender.backgroundColor = UIColor.green
+        } else {
+            sender.backgroundColor = UIColor.red
+        }
         if questionNumber == questions.count-1{
             questionNumber = 0
         } else {
             questionNumber += 1
         }
-        updateUi()
+        progressBar.progress = Float(questionNumber) / Float((questions.count-1))
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUi), userInfo: nil, repeats: false)
     }
     
-    func updateUi(){
+    @objc func updateUi(){
         questionLabel.text = questions[questionNumber].text
+        trueButton.backgroundColor = UIColor.clear
+        falseButton.backgroundColor = UIColor.clear
+        trueButton.backgroundColor = UIColor.gray
+        falseButton.backgroundColor = UIColor.gray
+
     }
         
     
