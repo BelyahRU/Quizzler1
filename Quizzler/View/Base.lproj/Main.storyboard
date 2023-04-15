@@ -16,75 +16,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="DIt-4u-wEr">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="TRn-Ml-OUB">
                                 <rect key="frame" x="0.0" y="47" width="428" height="845"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст вопроса который придумал саша аззазазазаззаза" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wj-EF-VHZ">
-                                        <rect key="frame" x="20" y="0.0" width="388" height="685"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <color key="textColor" red="0.84705877299999999" green="0.44313728810000003" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHx-Dd-0Nz">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="qFW-QS-s6Z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdj-I6-bav">
-                                        <rect key="frame" x="20" y="707" width="388" height="45"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="DIt-4u-wEr">
+                                        <rect key="frame" x="0.0" y="59" width="428" height="786"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст вопроса который придумал саша аззазазазаззаза" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wj-EF-VHZ">
+                                                <rect key="frame" x="20" y="0.0" width="388" height="626"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" red="0.84705877299999999" green="0.44313728810000003" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdj-I6-bav">
+                                                <rect key="frame" x="20" y="648" width="388" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="yGB-S1-agR"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="True">
+                                                    <color key="baseForegroundColor" red="0.84705877299999999" green="0.44313728810000003" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXE-xp-GjW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNI-mv-Pe9">
+                                                <rect key="frame" x="20" y="715" width="388" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="w6P-dz-fas"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="False">
+                                                    <color key="baseForegroundColor" red="0.84705877299999999" green="0.44313728810000003" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iei-st-tlJ"/>
+                                                </connections>
+                                            </button>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8hc-KG-dgc">
+                                                <rect key="frame" x="20" y="782" width="388" height="4"/>
+                                                <color key="progressTintColor" red="0.84705877299999999" green="0.44313728810000003" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </progressView>
+                                        </subviews>
+                                        <color key="tintColor" systemColor="systemBrownColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="yGB-S1-agR"/>
+                                            <constraint firstAttribute="trailing" secondItem="hdj-I6-bav" secondAttribute="trailing" constant="20" id="6ej-ef-6Ex"/>
+                                            <constraint firstAttribute="trailing" secondItem="dNI-mv-Pe9" secondAttribute="trailing" constant="20" id="BGR-Dt-upG"/>
+                                            <constraint firstItem="hdj-I6-bav" firstAttribute="leading" secondItem="DIt-4u-wEr" secondAttribute="leading" constant="20" id="I9k-ME-qFz"/>
+                                            <constraint firstAttribute="trailing" secondItem="4wj-EF-VHZ" secondAttribute="trailing" constant="20" id="Ijt-rB-Fk0"/>
+                                            <constraint firstItem="dNI-mv-Pe9" firstAttribute="top" secondItem="hdj-I6-bav" secondAttribute="bottom" constant="22" id="K3q-AN-b6D"/>
+                                            <constraint firstItem="hdj-I6-bav" firstAttribute="top" secondItem="4wj-EF-VHZ" secondAttribute="bottom" constant="22" id="MqV-nO-xT8"/>
+                                            <constraint firstItem="hdj-I6-bav" firstAttribute="top" secondItem="4wj-EF-VHZ" secondAttribute="bottom" constant="22" id="N6F-Lp-XqA"/>
+                                            <constraint firstItem="8hc-KG-dgc" firstAttribute="leading" secondItem="DIt-4u-wEr" secondAttribute="leading" constant="20" id="Ydq-oD-Mwb"/>
+                                            <constraint firstItem="4wj-EF-VHZ" firstAttribute="leading" secondItem="DIt-4u-wEr" secondAttribute="leading" constant="20" id="ggy-rB-ozU"/>
+                                            <constraint firstAttribute="trailing" secondItem="8hc-KG-dgc" secondAttribute="trailing" constant="20" id="iSK-Bo-I54"/>
+                                            <constraint firstItem="dNI-mv-Pe9" firstAttribute="leading" secondItem="DIt-4u-wEr" secondAttribute="leading" constant="20" id="ivI-U4-Dkq"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="True">
-                                            <color key="baseForegroundColor" red="0.84705877299999999" green="0.44313728810000003" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXE-xp-GjW"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNI-mv-Pe9">
-                                        <rect key="frame" x="20" y="774" width="388" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="w6P-dz-fas"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="False">
-                                            <color key="baseForegroundColor" red="0.84705877299999999" green="0.44313728810000003" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="answerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iei-st-tlJ"/>
-                                        </connections>
-                                    </button>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8hc-KG-dgc">
-                                        <rect key="frame" x="20" y="841" width="388" height="4"/>
-                                        <color key="progressTintColor" red="0.84705877299999999" green="0.44313728810000003" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </progressView>
+                                    </stackView>
                                 </subviews>
-                                <color key="tintColor" systemColor="systemBrownColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="hdj-I6-bav" secondAttribute="trailing" constant="20" id="6ej-ef-6Ex"/>
-                                    <constraint firstAttribute="trailing" secondItem="dNI-mv-Pe9" secondAttribute="trailing" constant="20" id="BGR-Dt-upG"/>
-                                    <constraint firstItem="hdj-I6-bav" firstAttribute="leading" secondItem="DIt-4u-wEr" secondAttribute="leading" constant="20" id="I9k-ME-qFz"/>
-                                    <constraint firstAttribute="trailing" secondItem="4wj-EF-VHZ" secondAttribute="trailing" constant="20" id="Ijt-rB-Fk0"/>
-                                    <constraint firstItem="dNI-mv-Pe9" firstAttribute="top" secondItem="hdj-I6-bav" secondAttribute="bottom" constant="22" id="K3q-AN-b6D"/>
-                                    <constraint firstItem="hdj-I6-bav" firstAttribute="top" secondItem="4wj-EF-VHZ" secondAttribute="bottom" constant="22" id="MqV-nO-xT8"/>
-                                    <constraint firstItem="hdj-I6-bav" firstAttribute="top" secondItem="4wj-EF-VHZ" secondAttribute="bottom" constant="22" id="N6F-Lp-XqA"/>
-                                    <constraint firstItem="8hc-KG-dgc" firstAttribute="leading" secondItem="DIt-4u-wEr" secondAttribute="leading" constant="20" id="Ydq-oD-Mwb"/>
-                                    <constraint firstItem="4wj-EF-VHZ" firstAttribute="leading" secondItem="DIt-4u-wEr" secondAttribute="leading" constant="20" id="ggy-rB-ozU"/>
-                                    <constraint firstAttribute="trailing" secondItem="8hc-KG-dgc" secondAttribute="trailing" constant="20" id="iSK-Bo-I54"/>
-                                    <constraint firstItem="dNI-mv-Pe9" firstAttribute="leading" secondItem="DIt-4u-wEr" secondAttribute="leading" constant="20" id="ivI-U4-Dkq"/>
+                                    <constraint firstAttribute="trailing" secondItem="fHx-Dd-0Nz" secondAttribute="trailing" id="7Rd-DP-MdW"/>
+                                    <constraint firstItem="DIt-4u-wEr" firstAttribute="leading" secondItem="TRn-Ml-OUB" secondAttribute="leading" id="FEn-kO-VJt"/>
+                                    <constraint firstItem="fHx-Dd-0Nz" firstAttribute="top" secondItem="TRn-Ml-OUB" secondAttribute="top" id="IcZ-RY-4JA"/>
+                                    <constraint firstItem="fHx-Dd-0Nz" firstAttribute="leading" secondItem="TRn-Ml-OUB" secondAttribute="leading" id="JVj-TT-EHt"/>
+                                    <constraint firstAttribute="trailing" secondItem="DIt-4u-wEr" secondAttribute="trailing" id="SRA-IC-UO7"/>
+                                    <constraint firstAttribute="bottom" secondItem="DIt-4u-wEr" secondAttribute="bottom" id="dIH-sV-PgN"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.8901960784313725" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DIt-4u-wEr" secondAttribute="bottom" id="9Sv-oc-ETE"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DIt-4u-wEr" secondAttribute="trailing" id="Paq-p4-kia"/>
-                            <constraint firstItem="DIt-4u-wEr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qcw-uz-4et"/>
-                            <constraint firstItem="DIt-4u-wEr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vXM-gt-4wG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TRn-Ml-OUB" secondAttribute="bottom" id="3z9-bc-jh9"/>
+                            <constraint firstItem="TRn-Ml-OUB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MHW-QE-A7B"/>
+                            <constraint firstAttribute="trailing" secondItem="TRn-Ml-OUB" secondAttribute="trailing" id="OXu-FO-mx9"/>
+                            <constraint firstItem="TRn-Ml-OUB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Pvj-g7-d0M"/>
+                            <constraint firstItem="TRn-Ml-OUB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TQh-0s-Lgj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TRn-Ml-OUB" secondAttribute="bottom" id="dLZ-M3-WmE"/>
+                            <constraint firstAttribute="trailing" secondItem="TRn-Ml-OUB" secondAttribute="trailing" id="eTe-Oi-Vc1"/>
+                            <constraint firstItem="TRn-Ml-OUB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gQB-Tf-MOD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="falseButton" destination="dNI-mv-Pe9" id="8Bc-Wc-mhY"/>
                         <outlet property="progressBar" destination="8hc-KG-dgc" id="oPj-Zz-XS1"/>
                         <outlet property="questionLabel" destination="4wj-EF-VHZ" id="B06-xm-wJV"/>
+                        <outlet property="scoreLabel" destination="fHx-Dd-0Nz" id="2Qh-bX-3WP"/>
                         <outlet property="trueButton" destination="hdj-I6-bav" id="DoA-qD-NsR"/>
                     </connections>
                 </viewController>

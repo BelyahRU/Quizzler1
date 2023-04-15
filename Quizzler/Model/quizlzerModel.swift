@@ -1,3 +1,4 @@
+import Foundation
 struct quizzlerModel {
     let questions = [Questions(text: "There are stars and zigzags on the flag of America", answer: "False"),
                      Questions(text: "The dinosaur with the longest neck for its body size is Mamenchisaurus hochuanensis, a sauropod dino that lived in what is now China.", answer: "True"),
@@ -17,6 +18,7 @@ struct quizzlerModel {
     mutating func addingScore() {
         if questionNumber == questions.count-1 {
             questionNumber = 0
+            score = 0
         } else {
             questionNumber += 1
         }
